@@ -1,5 +1,7 @@
 from django.urls import path
+from .views import TransactionListView,CreateTransactionView
 
 urlpatterns = [
-   # path('test', obtain_auth_token, name='token'),
+    path('all/', TransactionListView.as_view()),
+    path('create/', CreateTransactionView.as_view()),
 ]
