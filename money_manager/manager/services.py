@@ -14,7 +14,7 @@ def get_all_transactions():
 
 
 def create_transaction(request):
-    serializer = TransactionsListSerializer(data=request)
+    serializer = TransactionsListSerializer(data=request.data)
     if serializer.is_valid():
         serializer.save()
         return Response(serializer.data, status=200)

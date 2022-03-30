@@ -18,11 +18,11 @@ def transactionListView(request):
         return Response(all)
 
 
-@api_view(['POST'])
 def create_transaction(request):
     if request.method == "POST":
         create = create_transaction(request)
-    return JsonResponse(status=400)
+    return JsonResponse(status=400, data={"message": "error"})
+
 '''
 @api_view(['POST'])
 def create_transaction(request):
