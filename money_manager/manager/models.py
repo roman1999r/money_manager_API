@@ -6,6 +6,7 @@ from django.db import models
     title
 '''
 
+
 class Category(models.Model):
     title = models.CharField(max_length=75, verbose_name="Category")
 
@@ -17,6 +18,7 @@ class Category(models.Model):
     user
     category
 '''
+
 
 class Transaction(models.Model):
     amount = models.IntegerField(verbose_name='Amount')
