@@ -6,6 +6,7 @@ from django.db import models
     title
 '''
 
+
 class Category(models.Model):
     title = models.CharField(max_length=75, verbose_name="Category")
 
@@ -18,8 +19,9 @@ class Category(models.Model):
     category
 '''
 
+
 class Transaction(models.Model):
     amount = models.IntegerField(verbose_name='Amount')
-    datetime = models.DateTimeField
+    datetime = models.DateTimeField(auto_now_add=True)
     user = models.CharField(max_length=50, verbose_name="UserID")
     category = models.ForeignKey(Category, on_delete=models.CASCADE)

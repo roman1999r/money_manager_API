@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from manager.models import Transaction, Category
+
+from .models import Transaction
 
 
 class TransactionsListSerializer(serializers.ModelSerializer):
